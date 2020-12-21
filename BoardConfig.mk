@@ -31,11 +31,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-# Others (Just to fill default.prop/build.prop about arch [ro.])
-TARGET_CPU_ABI_LIST_64_BIT := $(TARGET_CPU_ABI)
-TARGET_CPU_ABI_LIST_32_BIT := $(TARGET_2ND_CPU_ABI),$(TARGET_2ND_CPU_ABI2)
-TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI_LIST_64_BIT),$(TARGET_CPU_ABI_LIST_32_BIT)
-
 # Kernel/Board flags
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
@@ -115,7 +110,6 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_SKIP_COMPATIBILITY_CHECK := true
-TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # TWRP: Display/BT
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
@@ -133,6 +127,7 @@ TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Misc: SELinux
 HAVE_SELINUX := true
