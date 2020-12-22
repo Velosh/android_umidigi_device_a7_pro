@@ -16,6 +16,7 @@
 # ETC Points
 /data               ext4      /dev/block/platform/bootdevice/by-name/userdata                       flags=display="Data";backup=1
 /cache              ext4      /dev/block/platform/bootdevice/by-name/cache                          flags=display="Cache";backup=1;wipeingui
+/persist            ext4      /dev/block/platform/bootdevice/by-name/persist                        flags=display="Persist";backup=1
 
 # SD-Card/OTG Points
 /external_sd        auto      /dev/block/mmcblk1p1  /dev/block/mmcblk1                              flags=display="SD-Card";storage;wipeingui;removable;backup=0

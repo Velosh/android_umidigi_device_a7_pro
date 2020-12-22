@@ -14,12 +14,10 @@ product /product ext4 ro wait,avb,logical,first_stage_mount,
 
 # Other partitions
 /dev/block/platform/bootdevice/by-name/md_udc /metadata ext4 noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
-/dev/block/platform/bootdevice/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc,errors=panic wait,check,formattable,quota,reservedsize=128m,formattable,resize,checkpoint=block,fileencryption=aes-256-xts
 /dev/block/platform/bootdevice/by-name/protect1 /mnt/vendor/protect_f ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 /dev/block/platform/bootdevice/by-name/protect2 /mnt/vendor/protect_s ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 /dev/block/platform/bootdevice/by-name/nvdata /mnt/vendor/nvdata ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 /dev/block/platform/bootdevice/by-name/nvcfg /mnt/vendor/nvcfg ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
-/dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 /dev/block/platform/bootdevice/by-name/frp /persistent emmc defaults defaults
 /dev/block/platform/bootdevice/by-name/teksunhw /teksunhw emmc defaults defaults
 /dev/block/platform/bootdevice/by-name/nvram /nvram emmc defaults defaults
